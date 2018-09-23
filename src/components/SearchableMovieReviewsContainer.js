@@ -22,13 +22,13 @@ export default class LatestMovieReviewsContainer extends Component {
   }
 
   fetchLatestMovieReviews = () => {
-    let url='https://api.nytimes.com/svc/movies/v2/reviews/search.json?' + 
+    let url='https://api.nytimes.com/svc/movies/v2/reviews/search.json?' +
             `query=${this.state.searchTerm},api-key=${NYT_API_KEY}`;
     fetch(URL)
       .then(result => result.json())
       .then(reviews => this.setState({reviews}))
   }
-  
+
   render() {
     return (
       <div className='searchable-movie-reviews'>
