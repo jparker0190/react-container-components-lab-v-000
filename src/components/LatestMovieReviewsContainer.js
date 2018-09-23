@@ -28,7 +28,7 @@ export default class LatestMovieReviewsContainer extends Component {
       .then(result => result.json())
       .then(reviews => this.setState({reviews}))
   }
-  
+
   render() {
     return (
       <div className='latest-movie-reviews'>
